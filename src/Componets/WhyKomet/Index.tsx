@@ -13,8 +13,8 @@ const WhyKomet = () => {
                         <WhyKOmetCard title="They grow so fast" text="Your USDTs and USDCs feel so at home here, that they will grow by 10% by the end of the year. Allow your stable coins to generate stable returns for you." />
                         <WhyKOmetCard title="They grow so fast" text="Your USDTs and USDCs feel so at home here, that they will grow by 10% by the end of the year. Allow your stable coins to generate stable returns for you." />
                         <WhyKOmetCard title="They grow so fast" text="Your USDTs and USDCs feel so at home here, that they will grow by 10% by the end of the year. Allow your stable coins to generate stable returns for you." />
-                        <div className="h-[35vh] flex bg-black flex-col justify-start px-11 ">
-                            <h1 className="text-5xl font-bold">They grow so fast</h1>
+                        <div className="h-[35vh]  flex bg-black flex-col justify-start px-11 ">
+                            <h1 className="text-5xl font-bold counter">They grow so fast</h1>
                             <p className="text-xl py-7">Your USDTs and USDCs feel so at home here, that they will grow by 10% by the end of the year. Allow your stable coins to generate stable returns for you."</p>
                         </div>
                     </div>

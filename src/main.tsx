@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './pages/App'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Aboutus from './pages/About';
 import Careers from './pages/Careers';
+
 ReactDOM.render(
+
   <React.StrictMode>
-    <div className='w-full bg-black text-white text-opacity-80  min-h-screen '>
+
+    <div className='w-full bg-black text-white min-h-screen '>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<App />} />
@@ -17,6 +20,8 @@ ReactDOM.render(
         </Routes>
       </BrowserRouter>
     </div>
+
   </React.StrictMode>,
+
   document.getElementById('root')
 )

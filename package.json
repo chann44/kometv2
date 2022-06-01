@@ -8,11 +8,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/uuid": "^8.3.4",
     "axios": "^0.26.1",
+    "firebase": "^9.8.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-router-dom": "6"
+    "react-hot-toast": "^2.2.0",
+    "react-icons": "^4.4.0",
+    "react-router-dom": "6",
+    "react-web-share": "^1.1.6",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",

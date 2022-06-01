@@ -7,7 +7,7 @@ const Career = () => {
                     <p>Banglore</p>
                 </div>
                 <div>
-                    <button className="px-3 py-1 bg-white text-black rounded-full text-opacity-60 opacity-80">Apply Now</button>
+                    <button className="px-3 py-1 hero text-white rounded-full ">Apply Now</button>
                 </div>
             </div>
         </>
