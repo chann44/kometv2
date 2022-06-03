@@ -7,6 +7,28 @@ import { Rank } from "../Componets/Rank";
 import WhyKomet from "../Componets/WhyKomet/Index";
 import { AppContext } from "../_context";
 import toast, { Toaster } from 'react-hot-toast'
+import Aboutus from "./About";
+import Careers from "./Careers";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+
+
+const App = () => {
+  return (
+    <>
+      <div className="">
+        <Navbar />
+        <Hero />
+        <WhyKomet />
+        <Features />
+        <Footer />
+        <Rank />
+      </div>
+
+    </>
+  )
+}
+
 
 const Home = () => {
 
@@ -50,13 +72,15 @@ const Home = () => {
         />
 
 
-        <div className="">
-          <Navbar />
-          <Hero />
-          <WhyKomet />
-          <Features />
-          <Footer />
-          <Rank />
+        <div className='w-full bg-black text-white min-h-screen '>
+          <BrowserRouter>
+            <Routes>
+              <Route path='/' element={<App />} />
+              <Route path='about' element={<Aboutus />} />
+              <Route path='docs' element={<Aboutus />} />
+              <Route path='careers' element={<Careers />} />
+            </Routes>
+          </BrowserRouter>
         </div>
       </AppContext.Provider>
 

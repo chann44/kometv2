@@ -39,9 +39,9 @@ const JoinWaitlist = () => {
                     >
                         <div className="relative w-auto my-6 mx-auto ">
                             {/*content*/}
-                            <div className=" rounded-lg shadow-lg relative px flex px-28 flex-col w-full bg-black border border-[#30D293] p outline-none focus:outline-none ">
+                            <div className=" rounded-lg shadow-lg relative px flex md:px-32 px-3 flex-col w-full bg-black border border-[#30D293] p outline-none focus:outline-none ">
                                 {/*header*/}
-                                <div className="flex   items-start  p-5  rounded-t">
+                                <div className="flex   items-start  md:p-5  rounded-t">
                                     <button
                                         className="p-1 ml-auto bg-transparent border-0 counter  float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                                         onClick={() => dset(false)}
@@ -51,13 +51,13 @@ const JoinWaitlist = () => {
                                 </div>
                                 {/*body*/}
                                 <div className="flex flex-col my-12 lg:w-[600px] ">
-                                    <div className="text-center mb-24">
-                                        <h1 className="counter text-5xl font-bold">Reserve your spot</h1>
-                                        <p className="text-5xl font-bold mt-9">Get Early Acess</p>
+                                    <div className="text-center md:mb-24 mb-5">
+                                        <h1 className="counter text-3xl md:text-5xl font-bold">Reserve your spot</h1>
+                                        <p className="md:text-5xl font-bold md:mt-9 text-3xl">Get Early Acess</p>
                                     </div>
 
                                     <form
-                                        className="w-full flex items-center"
+                                        className="w-full p-3 flex flex-col lg:flex-row items-center"
                                         onSubmit={async (e) => {
                                             e.preventDefault();
                                             setSubmit(true)
@@ -69,7 +69,7 @@ const JoinWaitlist = () => {
                                             (e) => {
                                                 setEmail(e.target.value)
                                             }
-                                        } type="text" placeholder="Enter your email " className="bg-transparent rounded-full border border-[#30D293] border-gray-700 py-3 px-4 w-full" />
+                                        } type="text" placeholder="Enter your email " className="bg-transparent rounded-full border border-[#30D293] mb-4 lg:m-0 py-3 px-4 w-full" />
                                         <input type="submit" value="join waitlist" className="mx-2 px-9 py-4 bg-slate-900 text-sm hero rounded-full " />
                                     </form>
                                 </div>

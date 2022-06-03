@@ -1,26 +1,13 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './pages/App'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Aboutus from './pages/About';
-import Careers from './pages/Careers';
+import Home from './pages/App'
+
 
 ReactDOM.render(
 
   <React.StrictMode>
-
-    <div className='w-full bg-black text-white min-h-screen '>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<App />} />
-          <Route path='about' element={<Aboutus />} />
-          <Route path='docs' element={<Aboutus />} />
-          <Route path='careers' element={<Careers />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-
+    <Home />
   </React.StrictMode>,
 
   document.getElementById('root')

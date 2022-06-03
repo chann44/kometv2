@@ -1,5 +1,6 @@
 import Career from "../Componets/careers/career";
 import Footer from "../Componets/Footer/Index";
+import JoinWaitlist from "../Componets/Join waitlist";
 import Navbar from "../Componets/Navbar";
 
 const Careers = () => {
@@ -38,6 +39,7 @@ const Careers = () => {
 
             </div>
             <Footer />
+            <JoinWaitlist />
         </>
     )
 }
