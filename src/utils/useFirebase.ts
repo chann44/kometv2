@@ -68,3 +68,35 @@ export const UseFirebase = async (email: any) => {
     }
   }
 };
+
+// console.log(email)
+//             const sortedArray: any = [];
+//             const sortedUser = collection(db, "users");
+//             const q = query(
+//                 sortedUser,
+//                 orderBy("points", "desc"),
+//                 orderBy("created_at", "asc")
+//             );
+
+//             const sortedUsers = (await getDocs(q)).docs;
+//             sortedUsers.forEach((doc) => {
+//                 sortedArray.push({ ...doc.data(), id: doc.id });
+//             });
+//             // console.log(sortedArray)
+//             const userQuery = query(sortedUser, where("email", "==", email));
+//             newuser = (await getDocs(userQuery)).docs[0].data();
+
+//             myurl = `${window.location.protocol}//${window.location.host}/?refID=${newuser ? newuser.refID : ""
+//                 }`;
+//             setrefLink(myurl);
+
+//             if (newuser) {
+//                 sortedArray.forEach((item: any) => {
+//                     if (newuser.refID === item.refID) {
+//                         // console.log("found it damn ")
+//                         setRank(sortedArray.indexOf(item) + 1500);
+//                     }
+//                 });
+//             } else {
+//                 console.log(" user not found ")
+//             }

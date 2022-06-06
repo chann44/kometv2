@@ -1,51 +1,43 @@
-import { db } from "../firebase";
-import { collection, getDocs, query, where, orderBy } from "firebase/firestore";
+
 import { useEffect, useState } from "react";
 import { RWebShare } from "react-web-share";
 import { useAppContext } from "../_context";
 
-
+import checkRefUrlExists, { checkIFUserExist, getRank, updatePoints, createUser, getUserRefUrl } from "../utils/useFirebase2";
+import { AiOutlineClose } from "react-icons/ai";
 
 export const Rank = () => {
     const [rank, setRank] = useState(0);
     const [reflink, setrefLink] = useState("");
-    let newuser: any = null;
-    let myurl: any = null;
     const { email } = useAppContext()
-    const { showModal, setShowModal, onSubmit } = useAppContext()
-
+    const { showModal, setShowModal, onSubmit, dset } = useAppContext()
     useEffect(() => {
         (async () => {
-            console.log(email)
-            const sortedArray: any = [];
-            const sortedUser = collection(db, "users");
-            const q = query(
-                sortedUser,
-                orderBy("points", "desc"),
-                orderBy("created_at", "asc")
-            );
-
-            const sortedUsers = (await getDocs(q)).docs;
-            sortedUsers.forEach((doc) => {
-                sortedArray.push({ ...doc.data(), id: doc.id });
-            });
-            // console.log(sortedArray)
-            const userQuery = query(sortedUser, where("email", "==", email));
-            newuser = (await getDocs(userQuery)).docs[0].data();
-
-            myurl = `${window.location.protocol}//${window.location.host}/?refID=${newuser ? newuser.refID : ""
-                }`;
-            setrefLink(myurl);
-
-            if (newuser) {
-                sortedArray.forEach((item: any) => {
-                    if (newuser.refID === item.refID) {
-                        // console.log("found it damn ")
-                        setRank(sortedArray.indexOf(item) + 1500);
+            const [refurlExist, refid] = checkRefUrlExists()
+            console.log(refurlExist, refid)
+            if (email) {
+                const [userExist, user] = await checkIFUserExist(email)
+                console.log(userExist, user)
+                if (userExist) {
+                    const rank = await getRank(email);
+                    setRank(rank)
+                    const newRefurl = await getUserRefUrl(email)
+                    console.log(newRefurl)
+                    setrefLink(newRefurl)
+                } else {
+                    const newUser = await createUser(email)
+                    console.log('user created')
+                    const newRefurl = await getUserRefUrl(email)
+                    console.log(newRefurl)
+                    setrefLink(newRefurl)
+                    const rank = await getRank(email);
+                    console.log(rank)
+                    setRank(rank)
+                    if (refurlExist) {
+                        const res = await updatePoints(refid)
+                        console.log(res)
                     }
-                });
-            } else {
-                console.log(" user not found ")
+                }
             }
         })();
     }, [email]);
@@ -60,8 +52,16 @@ export const Rank = () => {
                     >
                         <div className="relative w-full  my-6 mx-auto max-w-3xl">
                             {/*content*/}
-                            <div className="border-0 p-12 rounded-lg shadow-lg relative flex flex-col w-full bg-gray-900 outline-none focus:outline-none">
+                            <div className=" rounded-lg shadow-lg relative px flex md:px-10  px-3 flex-col w-full bg-black border border-[#30D293] p outline-none focus:outline-none">
                                 {/*header*/}
+                                <button
+                                    className="p-1 ml-auto bg-transparent border-0 counter  float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                                    onClick={() => {
+                                        setShowModal(false)
+                                    }}
+                                >
+                                    <AiOutlineClose className="text-4xl" />
+                                </button>
 
                                 {/*body*/}
                                 <div className="relative p-6 flex-auto">
@@ -91,31 +91,26 @@ export const Rank = () => {
                                             The first 1000 frens can get an exclusive NFT airdrop of worth $100 🎉
                                         </p>
                                         <div className="flex justify-between  w-[90%] text-sm max-w-md ">
-                                            <RWebShare
-                                                data={{
-                                                    title: myurl,
-                                                    url: reflink,
-                                                    text: myurl,
-                                                }}
-                                            >
-                                                <button className="w-full intro-gradient rounded-lg p-2 text-xl  ">
-                                                    Invite Friends
-                                                </button>
-                                            </RWebShare>
+                                            {
+                                                reflink ? <RWebShare
+                                                    data={{
+                                                        title: reflink,
+                                                        url: reflink,
+                                                        text: reflink,
+                                                    }}
+                                                >
+                                                    <button className="w-full intro-gradient rounded-lg p-2 text-xl  hero">
+                                                        Invite Friends
+                                                    </button>
+                                                </RWebShare> : null
+                                            }
+
                                         </div>
                                     </div>
 
                                 </div>
                                 {/*footer*/}
-                                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                                    <button
-                                        className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                        type="button"
-                                        onClick={() => setShowModal(false)}
-                                    >
-                                        Close
-                                    </button>
-                                </div>
+
                             </div>
                         </div>
                     </div>
