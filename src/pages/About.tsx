@@ -37,10 +37,10 @@ const TeamData = [
         role: "frontend developer "
     },
     {
-        name: "Anmol",
-        imglink: "https://pbs.twimg.com/profile_images/1518993545574502400/q2dvX3bS_400x400.jpg",
-        twitter: "https://twitter.com/anmol_gh_",
-        role: "community manager"
+        name: "Pooja Yamsalwar",
+        imglink: "https://pbs.twimg.com/profile_images/1534160248772390913/1BmWM-WM_400x400.jpg",
+        twitter: "https://twitter.com/poojaaaa05?https://twitter.com/poojaaaa05?t=T2Waxpfu54amK2m9fF",
+        role: "ui/ux designer"
     },
     {
         name: "Ishita Pandey",
@@ -49,11 +49,12 @@ const TeamData = [
         role: "social media manager"
     },
     {
-        name: "Pooja Yamsalwar",
-        imglink: "https://pbs.twimg.com/profile_images/1534160248772390913/1BmWM-WM_400x400.jpg",
-        twitter: "https://twitter.com/poojaaaa05?https://twitter.com/poojaaaa05?t=T2Waxpfu54amK2m9fF",
-        role: "ui/ux designer"
+        name: "Anmol",
+        imglink: "https://pbs.twimg.com/profile_images/1518993545574502400/q2dvX3bS_400x400.jpg",
+        twitter: "https://twitter.com/anmol_gh_",
+        role: "community manager"
     },
+
     {
         name: "Mahaparsad",
         imglink: "https://pbs.twimg.com/profile_images/1478382095999377410/1gUnt9P2_400x400.jpg",
