@@ -8,65 +8,33 @@ h1 {
   font-family: "Poppins", sans-serif;
 }
 
+.btn,
 .hero {
-  background: #159957; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #155799,
-    #159957
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #155799,
-    #159957
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.btn {
-  background: #159957; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to left,
-    #155799,
-    #159957
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #155799,
-    #159957
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #4776e6;
+  background: -webkit-linear-gradient(to right, #8e54e9, #4776e6);
+  background: linear-gradient(to right, #8e54e9, #4776e6);
 }
 
 .counter {
-  background-image: linear-gradient(to right, #155799, #159957);
+  background-image: linear-gradient(to left, #8e54e9, #4776e6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .card-top {
-  background: #34e89e; /* fallback for old browsers */
+  background: #4776e6;
   background: -webkit-linear-gradient(
-    to bottom,
-    #0f3443,
-    #34e89e
+    to right,
+    #8e54e9,
+    #4776e6
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to bottom,
-    #0f3443,
-    #34e89e
+    to right,
+    #8e54e9,
+    #4776e6
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .card {
-  background: #44a08d; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #093637,
-    #44a08d
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #093637,
-    #44a08d
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: #8e54e9 1px solid;
 }

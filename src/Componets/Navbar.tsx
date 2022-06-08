@@ -70,7 +70,7 @@ const Navbar = () => {
                         </>
                     })
                 }
-                <a href="https://kometverse.notion.site/Kometverse-Team-af006bc7947944aab126907c9af392bd" className="mx-3 text-sm counter">Careers</a>
+                <a href="https://kometverse.notion.site/Kometverse-Team-af006bc7947944aab126907c9af392bd" className="mx-3 text-lg counter">Careers</a>
 
             </ul>
 

@@ -16,7 +16,6 @@ const JoinWaitlist = () => {
     useEffect(() => {
         (async () => {
             console.log(onSubmit)
-            setShowModal(true)
             if (onSubmit) {
                 if (emailRegex.test(value)) {
                     setEmail(value)
@@ -40,7 +39,7 @@ const JoinWaitlist = () => {
                     >
                         <div className="relative w-auto my-6 mx-auto ">
                             {/*content*/}
-                            <div className=" rounded-lg shadow-lg relative px flex  px-3 flex-col w-full bg-black border border-[#30D293] p outline-none focus:outline-none ">
+                            <div className=" rounded-lg shadow-lg relative px flex  px-3 flex-col w-full bg-black border card p outline-none focus:outline-none ">
                                 {/*header*/}
                                 <div className="flex items-start  md:p-5 rounded-t">
                                     <button
@@ -68,7 +67,7 @@ const JoinWaitlist = () => {
                                             (e) => {
                                                 setValue(e.target.value)
                                             }
-                                        } type="text" placeholder="Enter your email " className="bg-transparent rounded-full border border-[#30D293] mb-4 lg:m-0 py-3 px-4 w-full" />
+                                        } type="text" placeholder="Enter your email " className="bg-transparent rounded-full border card mb-4 lg:m-0 py-3 px-4 w-full" />
                                         <input type="submit" value="join waitlist" className="mx-2 px-9 py-4 bg-slate-900 text-sm hero rounded-full " />
                                     </form>
                                 </div>

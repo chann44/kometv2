@@ -72,7 +72,7 @@ const Home = () => {
         />
 
 
-        <div className='w-full bg-black text-white min-h-screen '>
+        <div className='w-full bg-black text-white min-h-screen  text-opacity-90'>
           <BrowserRouter>
             <Routes>
               <Route path='/' element={<App />} />

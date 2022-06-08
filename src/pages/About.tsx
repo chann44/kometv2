@@ -17,7 +17,9 @@ const Aboutus = () => {
                 </div>
                 <h1 className="text-4xl lg:text-5xl text-center font-bold">Our <span className="counter">Team</span></h1>
                 <p className="text-center text-lg py-4">We have small but growing remote first team</p>
-                <div className="min-h-screen my-8 w-full  lg:w-[80%] flex content-start justify-between flex-wrap text-white  mx-auto">
+                <div className="min-h-screen my-8 w-full  lg:w-[80%] flex content-start justify-center flex-wrap text-white  mx-auto">
+                    <TeamCard />
+                    <TeamCard />
                     <TeamCard />
                     <TeamCard />
                     <TeamCard />
